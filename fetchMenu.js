@@ -1,5 +1,5 @@
 fetchMenu('https://GeekySans.github.io/menu.txt')
-.then(displayMenu)
+.then(displayMenu);
 
 async function fetchMenu(file) {
   let myFile = await fetch(file);
