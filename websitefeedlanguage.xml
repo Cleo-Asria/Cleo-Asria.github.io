@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wfl version="0.1"> <!-- This is an early alpha don't use this! -->
+  <document>
+    <name>Judy's page!</name>
+    <link>https://geekysans.github.io/</link>
+    
+    <title heading="h1">Judy's new webpage!</title>
+    <description heading="p">
+      Hello there everyone my names Judy and I'm making a new website because looking back at my old one I realized it kinda sucked. I tried making it look better         it kinda helped but overall it still sucked so I'm making a new website and taking all old articles to my new website.
+    </description>
+    <text heading="p">Feedback is NEEDED: Spacehey</text>
+  </document>
+</wfl>
