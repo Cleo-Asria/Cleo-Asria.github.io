@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<wfl version="0.1"> <!-- This is an early alpha don't use this! -->
+<wfml version="0.1"> <!-- This is an early alpha don't use this! -->
   <document>
     <head>
     <name>Judy's page!</name>
@@ -16,4 +16,4 @@
     </feature>
     </bio>
   </document>
-</wfl>
+</wfml>
