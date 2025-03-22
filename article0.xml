@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <wfml version="0.1"> <!-- This is an early alpha don't use this! -->
   <head>
-    <name>Judy's page!</name>
-    <link href="https://geekysans.github.io/">https://geekysans.github.io/</link>
+    
   </head>
   <body>
     <bio>
