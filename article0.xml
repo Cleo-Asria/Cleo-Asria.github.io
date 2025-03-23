@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <wfml version="0.1"> <!-- This is an early alpha don't use this! -->
-  <head>
-    
-  </head>
   <body>
     <bio>
       <title>Welcome to Judy's new webpage!</title>
