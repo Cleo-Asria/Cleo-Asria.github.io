@@ -8,5 +8,5 @@ async function fetchMenu(file) {
 
 async function displayMenu() {
   let myHTML = await myFile.text();
-  document.getElementById("demo").innerHTML = myHTML;
+  document.getElementsByClassName('menu')[0].innerHTML = myHTML;
 }
