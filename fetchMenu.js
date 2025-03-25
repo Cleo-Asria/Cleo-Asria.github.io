@@ -6,7 +6,7 @@ async function fetchMenu(file) {
   return await myFile
 }
 
-function displayMenu {
+async function displayMenu() {
   let myHTML = await myFile.text();
   document.getElementById("demo").innerHTML = myHTML;
 }
