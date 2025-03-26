@@ -24,7 +24,7 @@ function checkNode(node) {
   console.log(node.nodeName)
   switch(node.nodeName) {
     case 'body':
-    displayNode('div', '', 'wfmlbody', node.nodeName);
+    displayNode('div', '', 'content', node.nodeName);
     break;
     case 'bio':
     displayNode('div', '', node.parentNode.nodeName, node.nodeName);
