@@ -2,13 +2,19 @@
 <wfml version="0.1"> <!-- This is an early alpha don't use this! -->
   <body>
     <bio>
-      <title>Welcome to Judy's new webpage!</title>
+      <title>Judys Webpage!</title>
       <description>
-      Hello there everyone my names Judy and I'm making a new website because looking back at my old one I realized it kinda sucked. I tried making it look better it kinda helped but overall it still sucked so I'm making a new website and taking all old articles to my new website.
+      Hi there my names Judy I go by he/him and I like looking at websites, playing Among Us, coding and being with my friends! Okay there's more I also like Obsidian because it lets me store all my ideas in a very organized manner and I like going on discord/spacehey. Speaking of which I would luv ❤️❤️❤️ it if u give me some feedback I would really appreciate it Thanks!
     </description>
-    </bio>
     <feature>
-      <text>Feedback is NEEDED:</text> <link href="https://spacehey.com/">Spacehey</link>
+      <text>A Feedback Feature</text> <link href="https://spacehey.com/">Spacehey</link>
     </feature>
+    </bio>
+    <list>
+      <item>
+        <title></title>
+        <description></description>
+      </item>
+    </list>
   </body>
 </wfml>
