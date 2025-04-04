@@ -25,6 +25,6 @@
       </item>
     </list>
     <image src="https://img.freepik.com/premium-vector/self-confidence-woman-looking-mirror-illustration_619097-604.jpg" alt="Self" width="300px" height="300px"></image>
-    <audio src="https://www.w3schools.com/tags/horse.mp3" controls type="audio/mpeg" loop="true"></audio>
+    <audio src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" controls="true" loop="true"></audio>
   </body>
 </wfml>
