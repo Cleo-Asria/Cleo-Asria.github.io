@@ -1,24 +1,22 @@
 <item>
-<text>Sitemap</text>
-<item>
-<text>Home</text>
-</item>
-</item>
-<item>
-<text>Games</text>
-<item>
-<text>Someday a game will come out...</text>
-</item>
-</item>
-<item>
-<text>Blogs</text>
-<item>
-<text>Blogs coming soon!</text>
-</item>
-</item>
-<item>
-<text>Art</text>
-<item>
-<text>Art might be coming soon?</text>
-</item>
+  <text>Sitemap</text>
+
+  <item>
+    <text>Home</text>
+  </item>
+
+  <item>
+    <text>Games</text>
+    <text>Someday a game will come out...</text>
+  </item>
+
+  <item>
+    <text>Blogs</text>
+    <text>Blogs coming soon!</text>
+  </item>
+
+  <item>
+  <text>Art</text>
+  <text>Art might be coming soon?</text>
+  </item>
 </item>
