@@ -1,7 +1,9 @@
 <item>
-  <text>Sitemap</text>
   <item>
-    <text>Home</text>
+    <text>Sitemap</text>
+    <item>
+      <text>Home</text>
+    </item>
   </item>
   <item>
     <text>Games</text>
