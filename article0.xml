@@ -2,7 +2,7 @@
 <wfml version="0.1"> <!-- This is an early alpha don't use this! -->
   <body>
     <menu>
-      <file src="https://geekysans.github.io/menu.xml"></file>
+      <file src="https://geekysans.github.io/menu0.xml"></file>
     </menu>
     <main>
       <bio>
