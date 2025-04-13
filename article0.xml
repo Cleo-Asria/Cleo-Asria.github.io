@@ -2,7 +2,28 @@
 <wfml version="0.1"> <!-- This is an early alpha don't use this! -->
   <body>
     <menu>
-      <file src="https://geekysans.github.io/menu0.xml"></file>
+      <item>
+        <text>Sitemap</text>
+
+        <item>
+          <text>Home</text>
+        </item>
+
+        <item>
+          <text>Games</text>
+          <text>Someday a game will come out...</text>
+        </item>
+
+        <item>
+          <text>Blogs</text>
+          <text>Blogs coming soon!</text>
+        </item>
+
+        <item>
+          <text>Art</text>
+          <text>Art might be coming soon?</text>
+        </item>
+      </item>
     </menu>
     <main>
       <bio>
