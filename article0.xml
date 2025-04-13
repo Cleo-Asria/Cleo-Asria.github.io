@@ -35,7 +35,7 @@
         </item>
       </list>
       <audio src="https://www.w3schools.com/tags/horse.mp3" controls="true" loop="true"></audio>
-      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls="true" width="100px" height="100px"></video>
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls="true" width="500px" height="500px"></video>
     </main>
   </body>
 </wfml>
