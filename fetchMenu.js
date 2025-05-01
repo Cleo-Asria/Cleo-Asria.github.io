@@ -1,4 +1,4 @@
-fetchMenu('https://GeekySans.github.io/menu.txt')
+fetchMenu('https://GeekySans.github.io/menu.html')
 .then(displayMenu);
 
 async function fetchMenu(file) {
