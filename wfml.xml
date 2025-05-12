@@ -4,7 +4,7 @@
     <item>Blogs</item>
     <item>Code</item>
   </menu>
-  <user>
+  <profile>
    <!-- Profile: Username/Bio -->
     <username>Briggs</username>
     <bio><p>I'm the best!</p></bio>
@@ -19,7 +19,7 @@
         </comment>
       </comments>
     </features>
-  </user>
+  </profile>
   <articles>
     <item>
       <title>T1</title>
