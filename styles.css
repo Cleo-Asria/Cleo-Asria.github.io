@@ -21,10 +21,12 @@ padding: 10px;
 }
 .content {
 width: 500px;
+  
 position: relative;
 top: 0px;
 left: 625px;
 
+border: 5px ridge indigo;
 margin: 10px;
 
 text-align: center;
