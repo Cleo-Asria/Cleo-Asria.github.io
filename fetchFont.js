@@ -1,4 +1,4 @@
-fetchMenu('https://cleo-asria.github.io/getfont.html')
+fetchMenu('/getfont.html')
 .then(displayMenu);
 
 async function fetchMenu(file) {
