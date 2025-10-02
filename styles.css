@@ -31,4 +31,6 @@ li {
   
   border: 5px ridge indigo;
   margin: auto;
+
+  text-align: center;
 }
