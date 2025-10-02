@@ -24,10 +24,10 @@ li {
   padding: 0.8333%;
 }
 .content {
-  width: 20.83335%;
+  width: 75%;
   
   position: relative;
-  left: 75%;
+  left: 25%;
   
   border: 5px ridge indigo;
   margin: auto;
