@@ -13,7 +13,7 @@ li {
 }
 .menu {
   width: 25%;
-  height: 57.5%;
+  min-height: 57.5%;
   
   position: fixed;
   left: 0.8333%;
