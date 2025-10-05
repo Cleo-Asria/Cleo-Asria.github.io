@@ -21,8 +21,8 @@ li {
   position: fixed;
   left: 0.8333%;
   
-  border: 5px ridge indigo;
-  color: purple;
+  border: 5px ridge lightblue;
+  color: cyan;
   margin: 0.8333%;
   padding: 0.8333%;
 }
@@ -32,8 +32,9 @@ li {
   position: relative;
   left: 13%;
   
-  border: 5px ridge indigo;
+  border: 5px ridge lightblue;
   margin: auto;
 
   text-align: center;
+  color: white;
 }
