@@ -4,7 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
       <html>
         <body>
-          <xsl:for-each select="note">
+          <xsl:for-each select="notes/note">
             <p><xsl:value-of select="from"/></p>
             <p><xsl:value-of select="to"/></p>
             <p><xsl:value-of select="context"/></p>
