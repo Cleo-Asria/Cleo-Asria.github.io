@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="XSLstyles.xsl"?>
+<?xml-stylesheet type="text/xsl" href="XSLstyles2.xsl"?>
 <note>
   <from>James</from>
   <to>Berry</to>
@@ -10,3 +10,4 @@
   <to>James</to>
   <context>HI!</context>
 </note>
+
