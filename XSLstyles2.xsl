@@ -4,11 +4,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
       <html>
         <body>
-          <xsl:for-each select="notes/note">
-            <p><xsl:value-of select="from"/></p>
-            <p><xsl:value-of select="to"/></p>
-            <p><xsl:value-of select="context"/></p>
-          </xsl:for-each>
+          <div class="notes">
+            <xsl:for-each select="notes/note">
+              <div class="note">
+                <p class="from">From: <xsl:value-of select="from"/></p>
+                <p class="to">To: <xsl:value-of select="to"/></p>
+                <p class="context"><xsl:value-of select="context"/></p>
+              </div>
+            </xsl:for-each>
+          </div>
         </body>
       </html>
   </xsl:template>
