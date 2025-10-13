@@ -9,7 +9,7 @@ const xslDocument = new DOMParser().parseFromString(xslString, "text/xml");
 
 xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xslDocument);
-resultDocument = xsltProcessor.transformToFragment(xml, document);
+resultDocument = xsltProcessor.transformToFragment(xmlDocument, document);
 document.getElementById("example").appendChild(resultDocument);
 
 console.log(xmlDocument);
