@@ -5,13 +5,16 @@
 const xmlString = '﻿<?xml version="1.0" encoding="UTF-8"?><notes><note><from>James</from><to>Berry</to><context>Hello there!</context></note><note><from>Berry</from><to>James</to><context>HI!</context></note></notes>';
 const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
 const xslString = '<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><xsl:template match="/"><html><body><div class="notes"><xsl:for-each select="notes/note"><div class="note"><p class="from">From: <xsl:value-of select="from"/></p><p class="to">To: <xsl:value-of select="to"/></p><p class="context"><xsl:value-of select="context"/></p></div></xsl:for-each></div></body></html></xsl:template></xsl:stylesheet>'
+const xslDocument = new DOMParser().parseFromString(xslString, "text/xml");
 
 xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xslString);
+xsltProcessor.importStylesheet(xslDocument);
 resultDocument = xsltProcessor.transformToFragment(xml, document);
 document.getElementById("example").appendChild(resultDocument);
 
 console.log(xmlDocument);
+console.log(xslDocument);
+console.log(resultDocument);
 </script>
 </body>
 </html>
