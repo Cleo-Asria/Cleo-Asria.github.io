@@ -1,0 +1,24 @@
+<html>
+<body>
+<script>
+const xmlString = `
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSLstyles2.xsl"?>
+<notes>
+  <note>
+    <from>James</from>
+    <to>Berry</to>
+    <context>Hello there!</context>
+  </note>
+  <note>
+    <from>Berry</from>
+    <to>James</to>
+    <context>HI!</context>
+  </note>
+</notes>
+`;
+const xmlDocument = new DOMParser().parseFromString(xmlString. "text/xml");
+console.log(xmlDocument);
+</script>
+</body>
+</html>
