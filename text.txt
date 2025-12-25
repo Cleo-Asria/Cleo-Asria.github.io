@@ -1,1 +1,42 @@
-lalalalalalalalala
+<body>
+<h2>Sitemap</h2>
+<ul>
+<li>
+<h3>Home</h3>
+<ul>
+<li>Bio?</li>
+<li>Stuff!</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<h3>Games</h3>
+<ul>
+<li></li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<h3>Blogs</h3>
+<ul>
+<li><a href="/TSIB.html">The spaces in between!</a></li>
+<li><a href="/mySunday.html">My Sunday</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<h3>Art</h3>
+<ul>
+<li>My Ideas?</li>
+<li>My art.</li>
+</ul>
+</li>
+</ul>
+</body>
