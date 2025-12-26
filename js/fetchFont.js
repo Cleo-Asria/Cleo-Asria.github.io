@@ -1,4 +1,4 @@
-fetchHTMLContent('/getfont.html')
+fetchHTMLContent('js/getfont.html')
 .then(displayHTMLContent);
 
 async function fetchHTMLContent(file) {
