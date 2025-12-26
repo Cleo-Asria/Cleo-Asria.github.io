@@ -8,6 +8,6 @@ async function fetchHTMLContent(file) {
 
 async function displayHTMLContent(myFile) {
   let insertedHTML = await myFile.text();
-  currentHTML = document.getElementsByTagName('body')[0].innerHTML;
+  currentHTML = document.body.innerHTML;
   currentHTML = currentHTML + insertedHTML;
 }
