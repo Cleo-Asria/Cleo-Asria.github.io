@@ -1,12 +1,12 @@
-fetchMenu('/menu.html')
-.then(displayMenu);
+fetchHTMLContent('/menu.html')
+.then(displayHTMLContent);
 
-async function fetchMenu(file) {
+async function fetchHTMLContent(file) {
   let myFile = await fetch(file);
   return await myFile
 }
 
-async function displayMenu(myFile) {
+async function displayHTMLContent(myFile) {
   let myHTML = await myFile.text();
-  document.getElementsByClassName('menu')[0].innerHTML = myHTML;
+  document.getElementsByTagName('body')[0].innerHTML = myHTML;
 }
