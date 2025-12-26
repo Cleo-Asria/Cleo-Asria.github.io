@@ -8,7 +8,7 @@ async function fetchHTMLContent(file) {
 
 async function displayHTMLContent(myFile) {
   insertedHTML = await myFile.text();
-  currentNode = document.getElementsByClassName('menu')[0];
+  currentNode = document.head;
   currentHTML = currentNode.innerHTML;
   currentNode.innerHTML = currentHTML + insertedHTML;
 }
