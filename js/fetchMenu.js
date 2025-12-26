@@ -1,4 +1,4 @@
-fetchHTMLContent('/menu.html')
+fetchHTMLContent('js/menu.html')
 .then(displayHTMLContent);
 
 async function fetchHTMLContent(file) {
