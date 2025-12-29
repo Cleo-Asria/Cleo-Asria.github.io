@@ -3,7 +3,7 @@ export async function fetchHTMLContent(file) {
   return await myFile;
 }
 
-export function displayHTMLContent(myFile, insertTo) {
+export async function displayHTMLContent(myFile, insertTo) {
   insertedHTML = await myFile.text();
   currentNode = document.head;
   currentHTML = currentNode.innerHTML;
