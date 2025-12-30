@@ -2,4 +2,4 @@ import {fetchHTMLContent, displayHTMLContent} from './../../../js/fetchHTMLConte
 
 let resultText = fetchHTMLContent('../../../js/menu.html');
 let insertInto = document.getElementById('menu');
-displayHTMLContent(resultText, insertInto);
+resultText.then(displayHTMLContent, insertInto);
