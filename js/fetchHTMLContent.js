@@ -1,3 +1,5 @@
+let resultFile;
+let resultText;
 async function fetchHTMLContent(file) {
   resultFile = await fetch(file);
   resultText = await resultFile.text();
