@@ -2,4 +2,4 @@ import {fetchHTMLContent, displayHTMLContent} from './../../../js/fetchHTMLConte
 
 let resultText = fetchHTMLContent('../../../js/getfont.html');
 let insertInto = document.head;
-displayHTMLContent(resultText, insertInto);
+resultText.then(displayHTMLContent(resultText, insertInto));
