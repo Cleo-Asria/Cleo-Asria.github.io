@@ -1,5 +1,3 @@
-let resultFile;
-let resultText;
 async function fetchHTMLContent(file) {
   resultFile = await fetch(file);
   resultText = await resultFile.text();
@@ -12,4 +10,4 @@ function displayHTMLContent(resultText, insertTo) {
   currentNode.innerHTML = currentHTML + insertedHTML;
 }
 
-export {fetchHTMLContent, displayHTMLContent, resultFile, resultText}
+export {fetchHTMLContent, displayHTMLContent}
