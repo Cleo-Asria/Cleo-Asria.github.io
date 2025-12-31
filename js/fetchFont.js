@@ -1,2 +1,2 @@
-fetchHTMLContent('../../../js/getfont.html');
+fetchHTMLContent('../../../js/getfont.html')
 .then(displayHTMLContent(resultText, document.head));
