@@ -1,2 +1,2 @@
 fetchHTMLContent('../../../js/menu.html');
-displayHTMLContent(resultText, document.getElementById('menu'));
+.then(displayHTMLContent(resultText, document.getElementById('menu')));
