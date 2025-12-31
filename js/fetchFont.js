@@ -1,2 +1,2 @@
-let resultText = await fetchHTMLContent('../../../js/getfont.html');
-displayHTMLContent(resultText, document.head);
+fetchHTMLContent('../../../js/getfont.html')
+.then(displayHTMLContent(resultText, document.head));
