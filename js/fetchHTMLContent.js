@@ -9,5 +9,3 @@ function displayHTMLContent(resultText, insertTo) {
   currentHTML = currentNode.innerHTML;
   currentNode.innerHTML = currentHTML + insertedHTML;
 }
-
-export {fetchHTMLContent, displayHTMLContent}
