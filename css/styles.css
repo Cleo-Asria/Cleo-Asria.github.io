@@ -12,7 +12,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   
-  color: white;
+  color: rgb(175, 238, 238);
 }
 li {
   margin: 0.4167%;
@@ -26,7 +26,6 @@ li {
   
   border: 5px ridge lightblue;
   background-color: rgb(0, 0, 128, 0.2);
-  color: rgb(175, 238, 238);
   
   margin: 0.8333%;
   padding: 0.8333%;
@@ -40,7 +39,6 @@ li {
   
   border: 5px ridge lightblue;
   background-color: rgb(0, 0, 128, 0.2);
-  color: rgb(0, 8, 105);
   
   margin: auto;
   text-align: center;
