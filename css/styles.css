@@ -7,7 +7,7 @@ body {
   display: flex;
   
   background-color: blue;
-  background-image: url("../imgs/background.webp");
+  background-image: url("../imgs/background.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
