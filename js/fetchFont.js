@@ -1,5 +1,6 @@
 insertTo = [];
-insertTo[0] = document.head;
+item = 0;
+insertTo[item] = document.head;
 
 fetchHTMLContent('../../../js/getfont.html')
 .then(displayHTMLContent);
