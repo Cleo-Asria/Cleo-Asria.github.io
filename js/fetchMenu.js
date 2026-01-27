@@ -1,2 +1,2 @@
 fetchHTMLContent('../../../js/getfont.html')
-.then(displayHTMLContent(result, document.getElementById('menu')));
+.then(result => displayHTMLContent(result, document.getElementById('menu')));
