@@ -1,6 +1,6 @@
 async function fetchHTMLContent(file) {
   let resultFile = await fetch(file);
-  let resultText await resultFile.text();
+  let resultText = await resultFile.text();
   return resultText;
 }
 
