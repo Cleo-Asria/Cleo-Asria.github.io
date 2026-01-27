@@ -1,2 +1,2 @@
 fetchHTMLContent('../../../js/getfont.html')
-.then(displayHTMLContent(result, document.head));
+.then(result => displayHTMLContent(result, document.head));
