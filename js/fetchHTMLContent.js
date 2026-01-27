@@ -4,9 +4,9 @@ async function fetchHTMLContent(file) {
   return resultText;
 }
 
-function displayHTMLContent(resultText) {
-  insertedHTML = resultText;
-  currentNode = insertTo[item];
+function displayHTMLContent(result, insertTo) {
+  insertedHTML = result;
+  currentNode = insertTo;
   currentHTML = currentNode.innerHTML;
   currentNode.innerHTML = currentHTML + insertedHTML;
 }
