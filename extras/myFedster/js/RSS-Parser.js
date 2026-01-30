@@ -5,7 +5,7 @@ fetchFeed('https://cleo-asria.github.io/extras/myFedster/feed.xml')
 
 async function fetchFeed(url) {
     try {
-        const res = await fetch('feed.xml');
+        const res = await fetch(url);
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
