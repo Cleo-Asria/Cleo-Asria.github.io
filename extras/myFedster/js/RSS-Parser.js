@@ -19,7 +19,7 @@ async function fetchFeed(url) {
 
 function parseXML(xmlText) {
     const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlText.xml);
+    const xmlDoc = parser.parseFromString(xmlText.xml, 'text/xml');
     return xmlDoc;
 }
 
