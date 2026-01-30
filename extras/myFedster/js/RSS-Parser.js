@@ -24,7 +24,7 @@ function parseXML(xmlText) {
 }
 
 function extractFeedData(xmlDoc) {
-    const channel = querySelector('channel');
+    const channel = xmlDoc.querySelector('channel');
     if (!channel) {
         throw new Error("Invalid RSS feed: No <channel> element found");
     }
