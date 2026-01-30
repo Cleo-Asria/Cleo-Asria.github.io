@@ -1,3 +1,8 @@
+fetchFeed('https://cleo-asria.github.io/extras/myFedster/feed.xml')
+.then(parseXML)
+.then(extractFeedData)
+.catch(catchErrors)
+
 async function fetchFeed(url) {
     try {
         const res = await fetch('feed.xml');
@@ -7,8 +12,8 @@ async function fetchFeed(url) {
         const xmlText = await res.text();
         return xmlText;
     } catch(err) {
-        console.error("Error fetching RSS feed:", error);  
-        throw error;
+        console.error("Error fetching RSS feed:", err);  
+        throw err;
     }
 }
 
@@ -40,4 +45,8 @@ function extractFeedData(xmlDoc) {
             pubDate: item.querySelector("pubDate")?.textContent || "Unknown date"
         }
     })
+}
+
+function catchErrors(err) {
+    console.error("catchError:", err);
 }
