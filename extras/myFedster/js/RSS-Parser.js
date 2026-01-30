@@ -1,6 +1,3 @@
-fetchFeed()
-parseXML()
-
 async function fetchFeed(url) {
     try {
         const res = await fetch('feed.xml');
