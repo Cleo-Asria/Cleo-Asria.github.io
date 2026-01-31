@@ -1,54 +1,22 @@
-fetchFeed('https://cleo-asria.github.io/extras/myFedster/feed.xml')
-.then(parseXML)
+fetchFeed('Cleo-Asria.github.io/extras/myFedster/feed.xml')
+.then(parseFeed)
 .then(extractFeedData)
-.catch(catchErrors)
 
 async function fetchFeed(url) {
-    try {
-        const res = await fetch(url);
-        if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const xmlText = await res.text();
-        return xmlText;
-    } catch(err) {
-        console.error("Error fetching RSS feed:", err);  
-        throw err;
+    const res = await fetch(url);
+    const xmlText = await res.text();
+    return xmlText;
+}
+
+function parseFeed(xmlText) {
+    const parser = new DOMParser();  
+    const xmlFeed = parser.parseFromString(xmlText, "text/xml");
+    return xmlFeed;
+}
+
+function extractFeedData(xmlNode) {
+    console.log(xmlNode)
+    for (let i = 0; i < xmlNode.childElementCount; i++) {
+        extractFeedData(xmlNode.childern[i]);
     }
-}
-
-function parseXML(xmlText) {
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-    return xmlDoc;
-}
-
-function extractFeedData(xmlDoc) {
-    const channel = xmlDoc.querySelector('channel');
-    if (!channel) {
-        throw new Error("Invalid RSS feed: No <channel> element found");
-    }
-    
-    const feedData = {
-        title: channel.querySelector('title')?.textContent || "Untitled Feed",
-        link: channel.querySelector('link')?.textContent || "#",
-        description: channel.querySelector('description')?.textContent || "No description",
-        items: []
-    };
-
-    const items = xmlDoc.querySelectorAll("item");
-    items.forEach(item => {
-        const feedItem = {
-            title: channel.querySelector('title')?.textContent || "Untitled Item",
-            link: channel.querySelector('link')?.textContent || "#",
-            description: channel.querySelector('description')?.textContent || "No description",
-            pubDate: item.querySelector("pubDate")?.textContent || "Unknown date"
-        }
-        feedData.items.push(feedItem);
-    })
-    return feedData;
-}
-
-function catchErrors(err) {
-    console.error(err);
 }
