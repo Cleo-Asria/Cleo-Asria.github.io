@@ -1,4 +1,4 @@
-fetchFeed('Cleo-Asria.github.io/extras/myFedster/feed.xml')
+fetchFeed('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
 .then(parseFeed)
 .then(extractFeedData)
 
