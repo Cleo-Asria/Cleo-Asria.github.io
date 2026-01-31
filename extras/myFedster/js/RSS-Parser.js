@@ -45,7 +45,9 @@ function extractFeedData(xmlDoc) {
             description: channel.querySelector('description')?.textContent || "No description",
             pubDate: item.querySelector("pubDate")?.textContent || "Unknown date"
         }
+        feedData.items.push(feedItem);
     })
+    return feedData;
 }
 
 function catchErrors(err) {
