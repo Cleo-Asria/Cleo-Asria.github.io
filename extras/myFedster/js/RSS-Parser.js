@@ -49,5 +49,5 @@ function extractFeedData(xmlDoc) {
 }
 
 function catchErrors(err) {
-    console.error("catchError:", err);
+    console.error(err);
 }
