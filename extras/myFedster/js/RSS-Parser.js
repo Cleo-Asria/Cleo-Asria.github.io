@@ -16,7 +16,23 @@ function parseFeed(xmlText) {
 
 function extractFeedData(xmlNode) {
     console.log(xmlNode);
+    useNodeType(xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
         extractFeedData(xmlNode.children[i]);
     }
+}
+
+function useNodeType(xmlNode) {
+    feedConverter = {
+        rss: displayNode('<div class="rss"></div>'),
+        channel: '',
+        title: '',
+        link: '',
+        description: '',
+        item: ''
+    }
+}
+
+displayNode(displayHTML) {
+    document.body.getElementsByClassName('content')[0].innerHTML = displayHTML;
 }
