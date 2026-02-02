@@ -30,7 +30,8 @@ function useNodeType(xmlNode) {
         link: '',
         description: '',
         item: ''
-    }
+    };
+    feedConverter[`${xmlNode.nodeName}`];
 }
 
 displayNode(displayHTML) {
