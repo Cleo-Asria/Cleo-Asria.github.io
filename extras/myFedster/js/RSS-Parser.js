@@ -17,6 +17,6 @@ function parseFeed(xmlText) {
 function extractFeedData(xmlNode) {
     console.log(xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
-        extractFeedData(xmlNode.childern[i]);
+        extractFeedData(xmlNode.children[i]);
     }
 }
