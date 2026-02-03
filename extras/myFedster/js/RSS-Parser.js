@@ -34,6 +34,6 @@ function useNodeType(xmlNode) {
     displayNode(feedConverter[`${xmlNode.nodeName}`]);
 }
 
-function displayNode(displayHTML) {
-    document.body.getElementsByClassName('content')[0].innerHTML = displayHTML;
+function displayNode(insertedHTML) {
+    document.body.getElementsByClassName('content')[0].innerHTML += insertedHTML;
 }
