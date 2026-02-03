@@ -24,14 +24,14 @@ function extractFeedData(xmlNode) {
 
 function useNodeType(xmlNode) {
     feedConverter = {
-        rss: displayNode('<div class="rss"></div>'),
-        channel: '',
-        title: '',
-        link: '',
-        description: '',
-        item: ''
+        rss: '<div class="rss"></div>',
+        channel: '<div class="channel"></div>',
+        title: '<div class="title"></div>',
+        link: '<div class="link"></div>',
+        description: '<div class="description"></div>',
+        item: '<div class="item"></div>'
     };
-    feedConverter[`${xmlNode.nodeName}`];
+    displayNode(feedConverter[`${xmlNode.nodeName}`]);
 }
 
 function displayNode(displayHTML) {
