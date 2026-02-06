@@ -1,39 +1,36 @@
 fetchFeed('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
 .then(parseFeed)
-.then(extractFeedData)
+.then(res => extractFeedData(res, document.body.getElementsByClassName('content')[0]))
 
-async function fetchFeed(url) {
+async function fetchXml(url) {
     const res = await fetch(url);
     const xmlText = await res.text();
     return xmlText;
 }
 
-function parseFeed(xmlText) {
+function parseXml(xmlText) {
     const parser = new DOMParser();  
-    const xmlFeed = parser.parseFromString(xmlText, "text/xml");
-    return xmlFeed;
+    const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+    return xmlDoc;
 }
 
-function extractFeedData(xmlNode) {
+function getXmlNode(parentHtmlNode, xmlNode) {
     console.log(xmlNode);
     useNodeType(xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
-        extractFeedData(xmlNode.children[i]);
+        extractFeedData(parentHtmlNode, xmlNode.children[i]);
     }
 }
 
-function useNodeType(xmlNode) {
-    feedConverter = {
-        rss: '<div class="rss"></div>',
-        channel: '<div class="channel"></div>',
-        title: '<div class="title"></div>',
-        link: '<div class="link"></div>',
-        description: '<div class="description"></div>',
-        item: '<div class="item"></div>'
-    };
-    displayNode(feedConverter[`${xmlNode.nodeName}`]);
-}
-
-function displayNode(insertedHTML) {
-    document.body.getElementsByClassName('content')[0].innerHTML += insertedHTML;
+function createHtmlNode(parentHtmlNode, xmlNode) {
+	let newEl = document.createElement('div');
+	let newText = ''
+	if (xmlNode.childElementCount > 0) {
+		newText = document.createTextNode('');
+	} else {
+		newText = document.createTextNode(xmlNode.textContent); 
+	}
+	newEl.appendChild(newText);
+	parentHtmlNode.appendChild(newEl);
+	return newEl;
 }
