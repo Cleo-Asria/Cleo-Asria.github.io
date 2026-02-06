@@ -1,5 +1,5 @@
-fetchFeed('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
-.then(parseFeed)
+fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
+.then(parseXml)
 .then(res => extractFeedData(res, document.body.getElementsByClassName('content')[0]))
 
 async function fetchXml(url) {
