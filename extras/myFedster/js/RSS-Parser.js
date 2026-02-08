@@ -16,9 +16,9 @@ function parseXml(xmlText) {
 
 function getXmlNode(parentHtmlNode, xmlNode) {
     console.log(xmlNode);
-    useNodeType(xmlNode);
+    createHtmlNode(parentHtmlNode, xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
-        extractFeedData(parentHtmlNode, xmlNode.children[i]);
+        getXmlNode(parentHtmlNode, xmlNode.children[i]);
     }
 }
 
