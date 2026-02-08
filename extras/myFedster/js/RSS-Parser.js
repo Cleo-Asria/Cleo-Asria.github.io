@@ -1,6 +1,6 @@
 fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
 .then(parseXml)
-.then(res => getXmlNode(res, document.getElementsByClassName('content')[0]))
+.then(res => getXmlNode(res, document.body.getElementsByClassName('content')[0]))
 
 async function fetchXml(url) {
     const res = await fetch(url);
