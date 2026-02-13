@@ -1,6 +1,6 @@
 fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
 .then(parseXml)
-.then(res => getXmlNode(document.body.getElementsByClassName('content')[0], res))
+.then(res => getXmlNode(document.body, res.children[0].children[0]))
 
 async function fetchXml(url) {
     const res = await fetch(url);
@@ -16,9 +16,9 @@ function parseXml(xmlText) {
 
 function getXmlNode(parentHtmlNode, xmlNode) {
     console.log(xmlNode);
-    createHtmlNode(parentHtmlNode, xmlNode);
+    let nextEl = createHtmlNode(parentHtmlNode, xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
-        getXmlNode(parentHtmlNode, xmlNode.children[i]);
+        getXmlNode(nextEl, xmlNode.children[i]);
     }
 }
 
