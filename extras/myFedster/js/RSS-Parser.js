@@ -37,7 +37,7 @@ function createHtmlNode(parentHtmlNode, xmlNode) {
 }
 
 function pickHtmlNode(xmlNodeName) {
-	swtich (xmlNodeName) {
+	switch (xmlNodeName) {
 		case 'channel':
 		case 'item':
 		return 'div'
