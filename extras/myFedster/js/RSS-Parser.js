@@ -51,10 +51,10 @@ function pickHtmlNode(parentXmlNodeName, currentXmlNodeName) {
 			return 'p'
 		}
 		break
-		case 'link'
+		case 'link':
 		return 'a'
 		break
-		case 'description'
+		case 'description':
 		return 'p'
 		break
 	}
