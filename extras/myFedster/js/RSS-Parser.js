@@ -31,6 +31,7 @@ function createHtmlNode(parentHtmlNode, xmlNode) {
 		newText = document.createTextNode(xmlNode.textContent); 
 	}
 	newEl.appendChild(newText);
+	newEl.classList.add(xmlNode.nodeName);
 	parentHtmlNode.appendChild(newEl);
 	return newEl;
 }
