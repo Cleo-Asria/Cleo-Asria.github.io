@@ -23,7 +23,7 @@ function getXmlNode(parentHtmlNode, xmlNode) {
 }
 
 function createHtmlNode(parentHtmlNode, xmlNode) {
-	let newEl = document.createElement(pickHtmlNode(xmlNode.nodeName));
+	let newEl = document.createElement(pickHtmlNode(parentHtmlNode.classList.value, xmlNode.nodeName));
 	let newText = '';
 	if (xmlNode.childElementCount > 0) {
 		newText = document.createTextNode('');
@@ -36,14 +36,20 @@ function createHtmlNode(parentHtmlNode, xmlNode) {
 	return newEl;
 }
 
-function pickHtmlNode(xmlNodeName) {
+function pickHtmlNode(parentXmlNodeName, currentXmlNodeName) {
 	switch (xmlNodeName) {
 		case 'channel':
 		case 'item':
 		return 'div'
 		break
 		case 'title':
-		return 'h1'
+		if (parentHtmlNodeName === 'channel') {
+			return 'h1'
+		} else if (parentHtmlNodeName === 'item') {
+			return 'h3'
+		} else {
+			return 'p'
+		}
 		break
 		case 'link'
 		return 'a'
