@@ -1,3 +1,11 @@
+const xmlConverterObject = {
+	channel: 'div',
+	item: 'div',
+	title: 'h1',
+	link: 'a',
+	description: 'p'
+}
+
 fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
 .then(parseXml)
 .then(res => getXmlNode(document.getElementsByClassName('content')[0], res.children[0].children[0]))
@@ -23,7 +31,7 @@ function getXmlNode(parentHtmlNode, xmlNode) {
 }
 
 function createHtmlNode(parentHtmlNode, xmlNode) {
-	let newEl = document.createElement('div');
+	let newEl = document.createElement(xmlConverterObject[`${xmlNode.nodeName}`]);
 	let newText = ''
 	if (xmlNode.childElementCount > 0) {
 		newText = document.createTextNode('');
