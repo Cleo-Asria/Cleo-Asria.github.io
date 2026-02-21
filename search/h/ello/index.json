@@ -1,7 +1,10 @@
-{
-  "highlights": ["world", "master"],
-  "paths": [
-    "world",
-    "master"
-  ]
-}
+<root>
+  <highlights>
+    <highlight>world</highlight>
+    <highlight>master</highlight>
+  </highlights>
+  <paths>
+    <path>world</path>
+    <path>master</path>
+  </paths>
+</root>
