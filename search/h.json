@@ -1,7 +1,7 @@
 {
-  "highlights": ['hello world', 'he is an asshole'],
+  "highlights": ["hello world", "he is an asshole"],
   "paths": [
-    'hello',
-    'he'
+    "hello",
+    "he"
   ]
 }
