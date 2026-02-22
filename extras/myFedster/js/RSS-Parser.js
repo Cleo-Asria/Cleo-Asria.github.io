@@ -37,25 +37,27 @@ function createHtmlNode(parentHtmlNode, xmlNode) {
 }
 
 function pickHtmlNode(parentXmlNodeName, currentXmlNodeName) {
-	switch (xmlNodeName) {
+	switch (currentXmlNodeName) {
 		case 'channel':
 		case 'item':
 		return 'div'
 		break
 		case 'title':
-		if (parentHtmlNodeName === 'channel') {
-			return 'h1'
-		} else if (parentHtmlNodeName === 'item') {
-			return 'h3'
-		} else {
-			return 'p'
-		}
+			switch(parentXmlNodeName) {
+				case 'channel':
+				return 'h1'
+				break
+				case 'item':
+				return 'h3'
+				break
+				default:
+				return 'p'
+			}
 		break
 		case 'link':
 		return 'a'
 		break
 		case 'description':
 		return 'p'
-		break
 	}
 }
