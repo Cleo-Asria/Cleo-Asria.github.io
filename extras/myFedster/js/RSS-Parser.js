@@ -43,16 +43,16 @@ function pickHtmlNode(parentXmlNodeName, currentXmlNodeName) {
 		return 'div'
 		break
 		case 'title':
-			switch(parentXmlNodeName) {
-				case 'channel':
-				return 'h1'
-				break
-				case 'item':
-				return 'h3'
-				break
-				default:
-				return 'p'
-			}
+		switch(parentXmlNodeName) {
+			case 'channel':
+			return 'h1'
+			break
+			case 'item':
+			return 'h3'
+			break
+			default:
+			return 'p'
+		}
 		break
 		case 'link':
 		return 'a'
