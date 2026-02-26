@@ -16,48 +16,74 @@ function parseXml(xmlText) {
 
 function getXmlNode(parentHtmlNode, xmlNode) {
     console.log(xmlNode);
-    let nextEl = createHtmlNode(parentHtmlNode, xmlNode);
+    let nextEl = placeHtmlNode(parentHtmlNode, xmlNode);
     for (let i = 0; i < xmlNode.childElementCount; i++) {
         getXmlNode(nextEl, xmlNode.children[i]);
     }
 }
 
-function createHtmlNode(parentHtmlNode, xmlNode) {
-	let newEl = document.createElement(pickHtmlNode(parentHtmlNode.classList.value, xmlNode.nodeName));
-	let newText = '';
+function placeHtmlNode(parentHtmlNode, xmlNode) {
+	let newEl = createHtmlNode(parentHtmlNode.classList.value, xmlNode.nodeName, xmlNode.textContent);
+	parentHtmlNode.appendChild(newEl);
+	return newEl;
+}
+
+function createHtmlNode(parentXmlNodeName, xmlNodeName, xmlNodeTextContent) {
+	currentHtmlEl = chooseHtmlElNode(parentXmlNodeName, xmlNodeName);
+	currentHtmlEl = addHtmlTextNode(currentHtmlEl, xmlNodeTextContent);
+	currentHtmlEl = addHtmlAttrs(currentHtmlEl, xmlNodeName);
+	currentHtmlEl.classList.add(xmlNodeName);
+}
+
+function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
+	let currentHtmlNodeName = 'p';
+	switch (currentXmlNodeName) {
+		case 'channel':
+		case 'item':
+		currentHtmlNodeName = 'div';
+		break
+		case 'title':
+		switch(parentXmlNodeName) {
+			case 'channel':
+			currentHtmlNodeName = 'h1';
+			break
+			case 'item':
+			currentHtmlNodeName = 'h3';
+			break
+			default:
+			currentHtmlNodeName = 'p';
+		}
+		break
+		case 'link':
+		currentHtmlNodeName = 'a';
+		break
+		case 'description':
+		currentHtmlNodeName = 'p';
+	}
+	const resultEl = document.createElement(currentHtmlNodeName);
+	return resultEl;
+}
+
+function addHtmlTextNode(currentHtmlEl, xmlNode) {
+	let newText;
 	if (xmlNode.childElementCount > 0) {
 		newText = document.createTextNode('');
 	} else {
 		newText = document.createTextNode(xmlNode.textContent);
 	}
-	newEl.appendChild(newText);
-	newEl.classList.add(xmlNode.nodeName);
-	parentHtmlNode.appendChild(newEl);
-	return newEl;
+	resultEl.appendChild(newText);
+	return resultEl;
 }
 
-function pickHtmlNode(parentXmlNodeName, currentXmlNodeName) {
-	switch (currentXmlNodeName) {
-		case 'channel':
-		case 'item':
-		return 'div'
-		break
-		case 'title':
-		switch(parentXmlNodeName) {
-			case 'channel':
-			return 'h1'
-			break
-			case 'item':
-			return 'h3'
-			break
-			default:
-			return 'p'
-		}
-		break
+function addHtmlAttrs(currentHtmlEl, currentXmlNodeName) {
+	let currentAttrName = '';
+	let currentAttrValue = '';
+	switch(currentXmlNodeName) {
 		case 'link':
-		return 'a'
+		currentAttrName = 'href';
+		currentAttrValue = 'blah';
 		break
-		case 'description':
-		return 'p'
 	}
+	currentHtmlEl.setAttribute(currentAttrName, currentAttrValue);
+	return currentHtmlEl;
 }
