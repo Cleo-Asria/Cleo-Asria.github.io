@@ -83,6 +83,8 @@ function addHtmlAttrs(currentHtmlEl, currentXmlNodeName, xmlNodeTextContent) {
 		currentAttrName = 'href';
 		currentAttrValue = xmlNodeTextContent;
 		break
+		default:
+		return currentHtmlEl;
 	}
 	currentHtmlEl.setAttribute(currentAttrName, currentAttrValue);
 	return currentHtmlEl;
