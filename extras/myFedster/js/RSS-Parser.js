@@ -60,7 +60,7 @@ function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
 		case 'description':
 		currentHtmlNodeName = 'p';
 	}
-	const resultEl = document.createElement(currentHtmlNodeName);
+	const resultEl = document.createElement('p');
 	return resultEl;
 }
 
