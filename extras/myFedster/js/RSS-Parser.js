@@ -71,8 +71,8 @@ function addHtmlTextNode(currentHtmlEl, xmlNode) {
 	} else {
 		newText = document.createTextNode(xmlNode.textContent);
 	}
-	resultEl.appendChild(newText);
-	return resultEl;
+	currentHtmlEl.appendChild(newText);
+	return currentHtmlEl;
 }
 
 function addHtmlAttrs(currentHtmlEl, currentXmlNodeName) {
