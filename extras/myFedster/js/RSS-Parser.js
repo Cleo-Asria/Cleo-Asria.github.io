@@ -33,6 +33,7 @@ function createHtmlNode(parentXmlNodeName, xmlNodeName, xmlNodeTextContent) {
 	currentHtmlEl = addHtmlTextNode(currentHtmlEl, xmlNodeTextContent);
 	currentHtmlEl = addHtmlAttrs(currentHtmlEl, xmlNodeName, xmlNodeTextContent);
 	currentHtmlEl.classList.add(xmlNodeName);
+	return currentHtmlEl;
 }
 
 function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
@@ -60,7 +61,7 @@ function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
 		case 'description':
 		currentHtmlNodeName = 'p';
 	}
-	const resultEl = document.createElement('p');
+	const resultEl = document.createElement(currentHtmlNodeName);
 	return resultEl;
 }
 
