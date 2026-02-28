@@ -67,6 +67,7 @@ function addHtmlTextNode(xmlNode) {
 	} else {
 		newText = document.createTextNode(xmlNode.textContent);
 	}
+	return newText;
 }
 
 function chooseHtmlAttr(currentXmlNodeName) {
