@@ -25,7 +25,7 @@ function getXmlNode(parentHtmlNode, xmlNode) {
 function placeHtmlNode(parentHtmlNode, xmlNode) {
 	let newEl = chooseHtmlElNode(parentHtmlNode.classList.value, xmlNode.nodeName);
 	newEl.textContent = addHtmlTextNode(currentHtmlEl, xmlNode);
-	newEl.setAttribute('a', newEl.textContent);
+	newEl.setAttribute(chooseHtmlAttr(xmlNode.nodeName), newEl.textContent);
 	newEl.classList.add(xmlNodeName);
 	// createHtmlNode(parentHtmlNode.classList.value, xmlNode.nodeName, xmlNode.textContent);
 	parentHtmlNode.appendChild(newEl);
