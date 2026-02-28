@@ -25,7 +25,7 @@ function getXmlNode(parentHtmlNode, xmlNode) {
 function placeHtmlNode(parentHtmlNode, xmlNode) {
 	let newEl = chooseHtmlElNode(parentHtmlNode.classList.value, xmlNode.nodeName);
 	newEl.textContent = addHtmlTextNode(xmlNode);
-	chooseHtmlAttr(xmlNode.nodeName, newEl.textContent);
+	chooseHtmlAttr(newEl);
 	newEl.classList.add(xmlNode.nodeName);
 	parentHtmlNode.appendChild(newEl);
 	return newEl;
@@ -70,7 +70,7 @@ function addHtmlTextNode(xmlNode) {
 	return newText;
 }
 
-function chooseHtmlAttr(currentXmlNodeName, currentXmlNodeTextContent) {
+function chooseHtmlAttr(currentXmlNode) {
 	let currentAttrName = '';
 	switch(currentXmlNodeName) {
 		case 'link':
@@ -80,5 +80,5 @@ function chooseHtmlAttr(currentXmlNodeName, currentXmlNodeTextContent) {
 		return
 		break
 	}
-	return newEl.setAttribute(currentXmlNodeName, currentXmlNodeTextContent); 
+	return currentXmlNode.setAttribute(currentAttrName, currentXmlNode.textContent); 
 }
