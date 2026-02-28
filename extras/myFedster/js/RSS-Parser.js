@@ -72,7 +72,7 @@ function addHtmlTextNode(xmlNode) {
 
 function chooseHtmlAttr(newHtmlEl, currentXmlNode) {
 	let currentAttrName = '';
-	switch(currentXmlNodeName) {
+	switch(currentXmlNode.nodeName) {
 		case 'link':
 		currentAttrName = 'href';
 		break
