@@ -24,10 +24,9 @@ function getXmlNode(parentHtmlNode, xmlNode) {
 
 function placeHtmlNode(parentHtmlNode, xmlNode) {
 	let newEl = chooseHtmlElNode(parentHtmlNode.classList.value, xmlNode.nodeName);
-	newEl.textContent = addHtmlTextNode(currentHtmlEl, xmlNode);
+	newEl.textContent = addHtmlTextNode(xmlNode);
 	newEl.setAttribute(chooseHtmlAttr(xmlNode.nodeName), newEl.textContent);
-	newEl.classList.add(xmlNodeName);
-	// createHtmlNode(parentHtmlNode.classList.value, xmlNode.nodeName, xmlNode.textContent);
+	newEl.classList.add(xmlNode.nodeName);
 	parentHtmlNode.appendChild(newEl);
 	return newEl;
 }
@@ -61,15 +60,13 @@ function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
 	return resultEl;
 }
 
-function addHtmlTextNode(currentHtmlEl, xmlNode) {
+function addHtmlTextNode(xmlNode) {
 	let newText;
 	if (xmlNode.childElementCount > 0) {
 		newText = document.createTextNode('');
 	} else {
 		newText = document.createTextNode(xmlNode.textContent);
 	}
-	currentHtmlEl.appendChild(newText);
-	return currentHtmlEl;
 }
 
 function chooseHtmlAttr(currentXmlNodeName) {
