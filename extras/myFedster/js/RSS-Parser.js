@@ -61,11 +61,9 @@ function chooseHtmlElNode(parentXmlNodeName, currentXmlNodeName) {
 }
 
 function addHtmlTextNode(xmlNode) {
-	let newText;
-	if (xmlNode.childElementCount > 0) {
-		newText = document.createTextNode('');
-	} else {
-		newText = document.createTextNode(xmlNode.textContent);
+	let newText = '';
+	if (xmlNode.childElementCount < 1) {
+		newText = xmlNode.textContent;
 	}
 	return newText;
 }
