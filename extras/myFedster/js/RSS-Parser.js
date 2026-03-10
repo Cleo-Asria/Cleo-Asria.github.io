@@ -1,8 +1,9 @@
 function myFedsterStartup(urls) {
-	for
-	fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
-	.then(parseXml)
-	.then(res => getXmlNode(document.getElementsByClassName('content')[0], res.children[0].children[0]));
+	for (let i = 0; i < urls.length; i++) {
+		fetchXml(urls[i])
+		.then(parseXml)
+		.then(res => getXmlNode(document.getElementsByClassName('content')[0], res.children[0].children[0]));
+	}
 }
 
 async function fetchXml(url) {
