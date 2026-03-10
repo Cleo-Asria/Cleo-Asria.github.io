@@ -1,6 +1,9 @@
-fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
-.then(parseXml)
-.then(res => getXmlNode(document.getElementsByClassName('content')[0], res.children[0].children[0]));
+function myFedsterStartup(urls) {
+	for
+	fetchXml('https://Cleo-Asria.github.io/extras/myFedster/feed.xml')
+	.then(parseXml)
+	.then(res => getXmlNode(document.getElementsByClassName('content')[0], res.children[0].children[0]));
+}
 
 async function fetchXml(url) {
     const res = await fetch(url);
