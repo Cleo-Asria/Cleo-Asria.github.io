@@ -85,4 +85,4 @@ function chooseHtmlAttr(newHtmlEl, currentXmlNode) {
 	return newHtmlEl.setAttribute(currentAttrName, currentXmlNode.textContent); 
 }
 
-myFedsterStartup('https://cleo-asria.github.io/extras/myFedster/feed.xml');
+myFedsterStartup(['https://cleo-asria.github.io/extras/myFedster/feed.xml']);
